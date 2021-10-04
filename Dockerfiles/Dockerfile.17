@@ -9,11 +9,9 @@ RUN cat /tmp/jdk-17_linux* > /tmp/jdk17.rpm \
     && rpm -ivh /tmp/jdk17.rpm \
     && rm /tmp/jdk17.rpm
 
-ENTRYPOINT [ "java","-version"]
-
 # ENV TZ='Asia/Shanghai'
 # ENV LANG 'zh_CN.UTF-8'
 
 # STOPSIGNAL SIGQUIT
 
-CMD [ "java","-version"]
+CMD [ "/bin/bash"]
