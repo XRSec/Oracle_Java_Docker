@@ -5,7 +5,7 @@ on:
 
 jobs:
   Build_For_Arm64_Java8:
-    name: Docker Oracle Java Build aarch64
+    name: Docker Oracle Java Build Arm64_Java8
     runs-on: ubuntu-latest
     steps:
       - 
@@ -37,7 +37,7 @@ jobs:
           cache-to: type=gha,mode=max
 
   Build_For_Arm64_Java11:
-    name: Docker Oracle Java Build aarch64
+    name: Docker Oracle Java Build Arm64_Java11
     runs-on: ubuntu-latest
     steps:
       - 
@@ -69,7 +69,7 @@ jobs:
           cache-to: type=gha,mode=max
 
   Build_For_Arm64_Java16:
-    name: Docker Oracle Java Build aarch64
+    name: Docker Oracle Java Build Arm64_Java16
     runs-on: ubuntu-latest
     steps:
       - 
@@ -101,7 +101,7 @@ jobs:
           cache-to: type=gha,mode=max
 
   Build_For_Arm64_Java17:
-    name: Docker Oracle Java Build aarch64
+    name: Docker Oracle Java Build Arm64_Java17
     runs-on: ubuntu-latest
     steps:
       - 
@@ -132,8 +132,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           
-  Build_For_Amd64_Java_8:
-    name: Docker Oracle Java Build aarch64
+  Build_For_Amd64_Java8:
+    name: Docker Oracle Java Build Amd64_Java8
     runs-on: ubuntu-latest
     steps:
       - 
@@ -164,8 +164,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  Build_For_Amd64_Java_11:
-    name: Docker Oracle Java Build aarch64
+  Build_For_Amd64_Java11:
+    name: Docker Oracle Java Build Amd64_Java11
     runs-on: ubuntu-latest
     steps:
       - 
@@ -196,8 +196,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  Build_For_Amd64_Java_16:
-    name: Docker Oracle Java Build aarch64
+  Build_For_Amd64_Java16:
+    name: Docker Oracle Java Build Amd64_Java16
     runs-on: ubuntu-latest
     steps:
       - 
@@ -228,8 +228,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  Build_For_Amd64_Java_17:
-    name: Docker Oracle Java Build aarch64
+  Build_For_Amd64_Java17:
+    name: Docker Oracle Java Build Amd64_Java17
     runs-on: ubuntu-latest
     steps:
       - 
@@ -260,8 +260,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  Build_For_Arm_V8_Java_8:
-    name: Docker Oracle Java Build aarch64
+  Build_For_Arm_V8_Java8:
+    name: Docker Oracle Java Build Arm_V8_Java8
     runs-on: ubuntu-latest
     steps:
       - 
@@ -292,8 +292,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  Build_For_Arm_V8_Java_11:
-    name: Docker Oracle Java Build aarch64
+  Build_For_Arm_V8_Java11:
+    name: Docker Oracle Java Build Arm_V8_Java11
     runs-on: ubuntu-latest
     steps:
       - 
@@ -324,8 +324,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  Build_For_Arm_V8_Java_16:
-    name: Docker Oracle Java Build aarch64
+  Build_For_Arm_V8_Java16:
+    name: Docker Oracle Java Build Arm_V8_Java16
     runs-on: ubuntu-latest
     steps:
       - 
@@ -356,8 +356,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  Build_For_Arm_V8_Java_17:
-    name: Docker Oracle Java Build aarch64
+  Build_For_Arm_V8_Java17:
+    name: Docker Oracle Java Build Arm_V8_Java17
     runs-on: ubuntu-latest
     steps:
       - 
