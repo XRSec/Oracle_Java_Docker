@@ -129,6 +129,6 @@ jobs:
           push: true
           tags: |
             xrsec/java:17
-            xrsec/java:LATEST
+            xrsec/java:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
