@@ -9,11 +9,9 @@ RUN cat /tmp/jdk-16.0.2_linux* > /tmp/jdk16.rpm \
     && rpm -ivh /tmp/jdk16.rpm \
     && rm /tmp/jdk16.rpm
 
-ENTRYPOINT [ "java","-version"]
-
 # ENV TZ='Asia/Shanghai'
 # ENV LANG 'zh_CN.UTF-8'
 
 # STOPSIGNAL SIGQUIT
 
-CMD [ "java","-version"]
+CMD [ "/bin/bash"]
