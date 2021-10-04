@@ -9,11 +9,9 @@ RUN cat /tmp/jdk-8u301-linux* > /tmp/jdk8.rpm \
     && rpm -ivh /tmp/jdk8.rpm \
     && rm /tmp/jdk8.rpm
 
-ENTRYPOINT [ "java","-version"]
-
 # ENV TZ='Asia/Shanghai'
 # ENV LANG 'zh_CN.UTF-8'
 
 # STOPSIGNAL SIGQUIT
 
-CMD [ "java","-version"]
+CMD [ "/bin/bash"]
