@@ -19,7 +19,7 @@ ARG BUILDVARIANT
 
 RUN mkdir -p ${TARGETPLATFORM}/test \
     && ls ${TARGETPLATFORM} > /os.txt \
-    && echo "TARGETPLATFORM : ${TARGETPLATFORM}" > /os.txt \
+    && echo "TARGETPLATFORM : ${TARGETPLATFORM}" >> /os.txt \
     && echo "TARGETOS : ${TARGETOS}" >> /os.txt \
     && echo "TARGETARCH : ${TARGETARGETARCHTOS}" >> /os.txt \
     && echo "TARGETVARIANT : ${TARGETVARIANT}" >> /os.txt \
