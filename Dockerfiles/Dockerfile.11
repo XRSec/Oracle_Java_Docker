@@ -1,0 +1,19 @@
+FROM centos:latest
+LABEL maintainer="xrsec"
+LABEL mail="troy@zygd.site"
+ARG TARGETPLATFORM
+
+COPY ${TARGETPLATFORM}/jdk-11.0.12_linux* /tmp/
+
+RUN cat /tmp/jdk-11.0.12_linux* > /tmp/jdk11.rpm \
+    && rpm -ivh /tmp/jdk11.rpm \
+    && rm /tmp/jdk11.rpm
+
+ENTRYPOINT [ "java","-version"]
+
+# ENV TZ='Asia/Shanghai'
+# ENV LANG 'zh_CN.UTF-8'
+
+# STOPSIGNAL SIGQUIT
+
+CMD [ "java","-version"]
