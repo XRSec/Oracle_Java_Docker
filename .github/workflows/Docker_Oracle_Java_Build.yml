@@ -136,7 +136,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           
-Build For Amd64 Java 8:
+  Build For Amd64 Java 8:
     name: Docker Oracle Java Build aarch64
     runs-on: ubuntu-latest
     steps:
