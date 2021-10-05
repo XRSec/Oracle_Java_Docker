@@ -32,11 +32,25 @@ split -b 50m jdk-17_linux-aarch64_bin.rpm jdk-17_linux-arm64-
 
 ## How to use
 
-> Build From Centos
+> Build From Centos ; platforms: linux/arm64,linux/amd64
 
 ```dockerfile
 FROM xrsec/java:latest
-RUN xxxx
+LABEL maintainer="xrsec"
+LABEL mail="troy@zygd.site"
+
+COPY Dockerfile /www
+
+RUN yum update -y && yum upgrade -y \
+    && yum install sudo ncurses langpacks-zh_CN.noarch -y
+
+ENV LANG zh_CN.utf8
+ENV TZ Asia/Shanghai
+
+STOPSIGNAL SIGWINCH
+
+EXPOSE 22 80 443
+CMD ["/bin/bash"]
 ```
 
 ## MD5
@@ -52,8 +66,6 @@ MD5 ( jdk8/jdk-8u301-linux-aarch64.rpm ) = 637725518e50e6554feefbb194c015ba
 ➜  Oracle_Java_Docker git:(master) ✗
 ```
 
-
-
 ## Licenses
 
 JDK 17 is downloaded, as part of the build process, from [Oracle Website](https://www.oracle.com/javadownload) under the [Oracle No-Fee Terms and Conditions (NFTC)](https://java.com/freeuselicense).
@@ -65,3 +77,5 @@ All scripts and files hosted in this project and GitHub [`docker/OracleJava`](ht
 ## Customer Support
 
 Oracle offers support for JDK 17, JDK 11, and JDK 8 (Server JRE) when running on certified operating systems in a container. For additional details on the JDK Certified System Configurations, please refer to the [Oracle Java SE Certified System Configuration Pages](https://www.oracle.com/technetwork/java/javaseproducts/documentation/index.html#sysconfig).
+> XRSec has the right to modify and interpret this article. If you want to reprint or disseminate this article, you must ensure the integrity of this article, including all contents such as copyright notice. Without the permission of the author, the content of this article shall not be modified or increased or decreased arbitrarily, and it shall not be used for commercial purposes in any way
+
