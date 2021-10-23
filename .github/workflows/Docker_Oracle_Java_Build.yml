@@ -65,7 +65,7 @@ jobs:
           file: Dockerfiles/Dockerfile.11
           push: true
           tags: |
-            xrsec/java:11
+            ${{ secrets.DOCKERHUB_USERNAME }}/java:11
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -97,7 +97,7 @@ jobs:
           file: Dockerfiles/Dockerfile.16
           push: true
           tags: |
-            xrsec/java:16
+            ${{ secrets.DOCKERHUB_USERNAME }}/java:16
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -129,8 +129,8 @@ jobs:
           file: Dockerfiles/Dockerfile.17
           push: true
           tags: |
-            xrsec/java:17
-            xrsec/java:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/java:17
+            ${{ secrets.DOCKERHUB_USERNAME }}/java:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -147,4 +147,4 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: xrsec/java
+          repository: ${{ secrets.DOCKERHUB_USERNAME }}/java
