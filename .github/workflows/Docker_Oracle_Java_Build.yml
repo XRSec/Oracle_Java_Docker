@@ -33,7 +33,7 @@ jobs:
           file: Dockerfiles/Dockerfile.8
           push: true
           tags: |
-            xrsec/java:8
+            ${{ secrets.DOCKERHUB_USERNAME }}/java:8
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
