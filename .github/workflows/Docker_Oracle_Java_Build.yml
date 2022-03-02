@@ -3,6 +3,7 @@ name: Docker Oracle Java Build
 on:
   watch:
     types: [started]
+  workflow_dispatch:
 
 jobs:
   Build_For_Java8:

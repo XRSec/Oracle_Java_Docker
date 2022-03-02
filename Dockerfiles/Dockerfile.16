@@ -5,6 +5,10 @@ ARG TARGETPLATFORM
 
 COPY ${TARGETPLATFORM}/jdk-16.0.2_linux* /tmp/
 
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* \
+    && sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS -* \
+    && yum clean all && yum makecache && yum update -y && yum upgrade -y
+
 RUN cat /tmp/jdk-16.0.2_linux* > /tmp/jdk16.rpm \
     && rpm -ivh /tmp/jdk16.rpm \
     && rm /tmp/jdk16.rpm
