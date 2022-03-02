@@ -23,7 +23,7 @@ jobs:
         name: Docker Login
         uses: docker/login-action@v1.10.0
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: xrsec
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Build and push Docker images
@@ -34,7 +34,7 @@ jobs:
           file: Dockerfiles/Dockerfile.8
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/java:8
+            xrsec/java:8
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -55,7 +55,7 @@ jobs:
         name: Docker Login
         uses: docker/login-action@v1.10.0
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: xrsec
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Build and push Docker images
@@ -66,7 +66,7 @@ jobs:
           file: Dockerfiles/Dockerfile.11
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/java:11
+            xrsec/java:11
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -87,7 +87,7 @@ jobs:
         name: Docker Login
         uses: docker/login-action@v1.10.0
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: xrsec
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Build and push Docker images
@@ -98,7 +98,7 @@ jobs:
           file: Dockerfiles/Dockerfile.16
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/java:16
+            xrsec/java:16
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -119,7 +119,7 @@ jobs:
         name: Docker Login
         uses: docker/login-action@v1.10.0
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: xrsec
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Build and push Docker images
@@ -130,8 +130,8 @@ jobs:
           file: Dockerfiles/Dockerfile.17
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/java:17
-            ${{ secrets.DOCKERHUB_USERNAME }}/java:latest
+            xrsec/java:17
+            xrsec/java:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -146,6 +146,6 @@ jobs:
         name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: xrsec
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: ${{ secrets.DOCKERHUB_USERNAME }}/java
+          repository: xrsec/java
