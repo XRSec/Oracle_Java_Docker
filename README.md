@@ -37,7 +37,7 @@ split -b 50m jdk-17_linux-aarch64_bin.rpm jdk-17_linux-arm64-
 ```dockerfile
 FROM xrsec/java:latest
 LABEL maintainer="xrsec"
-LABEL mail="troy@zygd.site"
+LABEL mail="Jalapeno1868@outlook.com"
 
 COPY Dockerfile /www
 
