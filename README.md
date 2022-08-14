@@ -1,4 +1,4 @@
-# [Oracle Java Docker](https://blog.zygd.site/Oracle%20Java%20Docker.html)
+# [Oracle Java Docker](https://xrsec.vercel.app/Oracle%20Java%20Docker.html)
 
 ![version](https://img.shields.io/badge/Version-17-da282a) [![Docker Automated Build](https://img.shields.io/docker/automated/xrsec/java?label=Build&logo=docker&style=flat-square)](https://hub.docker.com/r/xrsec/java) [![Docker Oracle Java Build](https://github.com/XRSec/Oracle_Java_Docker/actions/workflows/Docker_Oracle_Java_Build.yml/badge.svg)](https://github.com/XRSec/Oracle_Java_Docker/actions/workflows/Docker_Oracle_Java_Build.yml)
 
@@ -12,7 +12,7 @@
 
 - [Download](https://www.oracle.com/java/technologies/downloads/)
 
-- Split 
+- Split
 
 ```bash
 split -b 50m jdk-8u301-linux-x64.rpm jdk-8u301-linux-amd64-
@@ -28,7 +28,7 @@ split -b 50m jdk-17_linux-x64_bin.rpm jdk-17_linux-amd64-
 split -b 50m jdk-17_linux-aarch64_bin.rpm jdk-17_linux-arm64-
 ```
 
-- Build 
+- Build
 
 ## How to use
 
